@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator 2025 </title>
+    <link rel="shortcut icon" href="i635929.jpeg">
+    <link rel="stylesheet" href="style.css">
+</head>
+     <header>
+        <div class="container">
+        <img src="i635929.jpeg" alt="99" class="imagem">
+        <h1>Como Calcular o KM de uma Corrida de Mototáxi</h1>
+        <p>Aprenda a calcular o valor correto do quilômetro rodado e como os mototaxistas definem suas tarifas.</p>
+    </div>
+    </header>
+    
+    <section>
+        <h2>Passo 1: Compreenda a Tarifa de Base</h2>
+        <p>O valor do quilômetro pode ser determinado de acordo com a tabela local de tarifas para mototáxi...</p>
+    </section>
+    
+    <section>
+        <h2>Passo 2: Calcule a Distância Percorrida</h2>
+        <p>Calcular a distância corretamente é essencial para determinar o preço total da corrida...</p>
+    </section>
+
+    <section>
+        <h2>Passo 3: Custos Variáveis e Extras</h2>
+        <p>Além do valor da tarifa base, é importante considerar os custos variáveis, que podem impactar o preço final...</p>
+    </section>
+
+    <section>
+        <h2>Passo 4: Calcule o Valor Final da Corrida</h2>
+        <pre>
+            Exemplo:
+            10 km x R$ 2,50 = R$ 25,00
+            + R$ 5,00 (combustível)
+            + R$ 3,00 (pedágio)
+            Total: R$ 33,00
+        </pre>
+    </section>
+    
+    <section>
+        <h2>Passo 5: Use Nossa Calculadora de Tarifa</h2>
+        <form id="calculadora-form">
+            <label for="distancia">Distância (em km):</label>
+            <input type="number" id="distancia" required placeholder="Exemplo: 10" step="0.1">
+
+            <label for="tarifa">Tarifa por KM (R$):</label>
+            <input type="number" id="tarifa" required placeholder="Exemplo: 2.50" step="0.01">
+
+            <label for="combustivel">Custo do Combustível (R$):</label>
+            <input type="number" id="combustivel" placeholder="Exemplo: 5.00" step="0.01">
+
+            <label for="pedagio">Pedágio (R$):</label>
+            <input type="number" id="pedagio" placeholder="Exemplo: 3.00" step="0.01">
+
+            <button type="submit">Calcular</button>
+        </form>
+        
+        <p id="resultado"></p>
+    </section>
+
+    <section>
+        <h2>Outras Dicas para Mototaxistas</h2>
+        <p>Em época de chuva, a demanda por corridas tende a aumentar, pois muitas pessoas preferem não enfrentar o tempo ruim. Aproveite essa oportunidade para ajustar o preço da corrida, cobrando um valor um pouco maior. Isso ajuda a equilibrar a oferta e a demanda, além de compensar o tempo extra e o desgaste do veículo devido às condições climáticas. Mas lembre-se, seja justo e transparente com os passageiros para garantir uma experiência positiva! </p>
+    </section>
+
+    <footer id="rodape">
+        <div id="rodape-conteudo">
+            <p>&copy; 2025 Calculator - Todos os direitos reservados</p>
+            <button id="fechar-footer" onclick="fecharFooter()">Fechar Rodapé</button>
+        </div>
+    </footer>
+
+    <script>
+        // Função para mostrar um alerta
+        function mostrarAlerta() {
+            alert('Aqui estão mais informações sobre como calcular a tarifa de mototáxi!');
+        }
+
+        // Função para calcular o valor da corrida
+        document.getElementById('calculadora-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Obtendo os valores inseridos pelo usuário
+            const distancia = parseFloat(document.getElementById('distancia').value);
+            const tarifa = parseFloat(document.getElementById('tarifa').value);
+            const combustivel = parseFloat(document.getElementById('combustivel').value) || 0;
+            const pedagio = parseFloat(document.getElementById('pedagio').value) || 0;
+
+            // Validando os valores inseridos
+            if (isNaN(distancia) || isNaN(tarifa)) {
+                alert('Por favor, preencha todos os campos corretamente.');
+                return;
+            }
+
+            // Calculando o valor da corrida
+            const valorCorrida = (distancia * tarifa) + combustivel + pedagio;
+
+            // Exibindo o resultado
+            document.getElementById('resultado').textContent = 'Valor total da corrida: R$ ' + valorCorrida.toFixed(2);
+        });
+
+        // Função para fechar o rodapé
+        function fecharFooter() {
+            const rodape = document.getElementById('rodape');
+            rodape.style.display = 'none'; // Esconde o rodapé
+        }
+    </script>
+</body>
+</html>

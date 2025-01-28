@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+
+        display: flex;
+        align-items: flex-start; 
+}
+/* Corpo da página */
+.imagem {
+    display: block;
+    margin-left: auto;
+    margin-top: 50px;
+    width: 10%;
+    height: auto;
+
+}
+h1 {
+    display: inline-flex;
+
+    vertical-align: middle;
+
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #111; /* Fundo preto */
+    color: #f1f1f1; /* Texto claro */
+    padding: 0 20px;
+    image-resolution: 100px;
+    
+}
+
+/* Cabeçalho */
+header {
+    background-color: #f7b500; /* Amarelo vibrante */
+    color: #111; /* Texto preto */
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.1em;
+}
+
+/* Seções */
+section {
+    background-color: #222; /* Seções com fundo mais escuro */
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos das seções */
+h2 {
+    font-size: 2em;
+    color: #f7b500; /* Amarelo vibrante */
+    margin-bottom: 15px;
+}
+
+/* Parágrafos */
+p {
+    line-height: 1.8;
+    font-size: 1.1em;
+    color: #f1f1f1;
+}
+
+/* Links */
+a {
+    color: #f7b500; /* Amarelo */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Botões */
+button {
+    background-color: #f7b500; /* Amarelo */
+    color: #111; /* Preto */
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #d99b00; /* Amarelo mais escuro */
+    transform: scale(1.05); /* Pequena animação de aumento */
+}
+
+/* Rodapé */
+#rodape {
+    text-align: center;
+    padding: 20px;
+    background-color: #111; /* Preto */
+    color: #f1f1f1; /* Texto claro */
+    font-size: 1em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+
+#rodape-conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#fechar-footer {
+    background-color: #d99b00;
+    color: #111;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 25px;
+    transition: background-color 0.3s;
+}
+
+#fechar-footer:hover {
+    background-color: #f7b500;
+}
+
+/* Formulários */
+form {
+    margin-top: 20px;
+}
+
+form input, form button {
+    padding: 10px;
+    border-radius: 8px;
+    margin: 10px 0;
+    border: 2px solid #f7b500;
+    background-color: #333;
+    color: #f1f1f1;
+    width: 100%;
+}
+
+form button {
+    background-color: #f7b500;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #d99b00;
+}
+
+/* Resultado do cálculo */
+#resultado {
+    font-size: 1.5em;
+    color: #f7b500;
+    margin-top: 20px;
+}
